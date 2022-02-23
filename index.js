@@ -1,3 +1,7 @@
 import './src/scss/style.scss';
+import getHomesDb from './src/modules/getHomesDb';
+import renderCards from './src/modules/renderCards';
+import handleInput from './src/modules/handleInput';
 
-console.log('work');
+getHomesDb().then(renderCards);
+handleInput();
