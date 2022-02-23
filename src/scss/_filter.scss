@@ -1,0 +1,26 @@
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 43px;
+  padding-left: 10px;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+
+  &__label {
+    @extend %label-text;
+  }
+
+  &__input {
+    width: 418px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+
+    @media (max-width: 576px) {
+      max-width: 95%;
+    }
+  }
+}

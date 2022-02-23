@@ -8,6 +8,7 @@
   &__button {
     justify-content: center;
     gap: 5px;
+    width: 151px;
 
     @extend %label-text;
 
