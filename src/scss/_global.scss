@@ -10,8 +10,6 @@ body {
   color: $body-text-color;
   min-width: 320px;
 
-  padding-right: 10px;
-
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -23,6 +21,6 @@ body {
 }
 
 .container {
-  width: min(100%, 1180px);
+  width: min(98%, 1180px);
   margin: 0 auto;
 }

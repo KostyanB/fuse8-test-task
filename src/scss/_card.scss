@@ -1,0 +1,60 @@
+.card {
+  display: block;
+  max-width: 377px;
+  background-color: $card-fill;
+  border: $border;
+  cursor: pointer;
+
+  &__picture {
+    display: grid;
+  }
+
+  &__image {
+    grid-area: 1/-1;
+  }
+
+  &__label {
+    grid-area: 1/-1;
+    place-self: end;
+    width: max-content;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: $label-text;
+    z-index: 2;
+
+    &-blue {
+      background-color: $label-fill-blue;
+      padding: 8px 10px 5px 11px;
+    }
+    &-orange {
+      background-color: $label-fill-orange;
+      padding: 8px 8px 5px 8px;
+    }
+  }
+
+  &__content {
+    padding: 20px 20px 17px 20px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 27px;
+    margin-bottom: 2px;
+  }
+
+  &__description:first-of-type {
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+
+  &__comment {
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

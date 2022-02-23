@@ -4,6 +4,9 @@
   padding-top: 36px;
 
   &__title {
-    @include main-title;
+    font-size: clamp(20px, 3vw, 36px);
+    line-height: 1.36;
+    font-weight: bold;
+    color: $main-title;
   }
 }
