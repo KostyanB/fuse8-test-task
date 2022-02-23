@@ -1,0 +1,34 @@
+@mixin main-title {
+  font-size: 36px;
+  line-height: 1.36;
+  font-weight: bold;
+  color: $main-title;
+}
+
+@mixin card-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+@mixin card-price {
+  font-weight: bold;
+}
+
+@mixin card-comment {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+@mixin tag-text {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: $tag-text;
+}
+
+@mixin button-text {
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+}

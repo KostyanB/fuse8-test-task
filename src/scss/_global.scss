@@ -1,0 +1,32 @@
+/* global styles*/
+body {
+  font: {
+    family: 'Open Sans', sans-serif;
+    style: normal;
+    weight: normal;
+    size: 16px;
+  }
+  line-height: 22px;
+  color: $body-text-color;
+  min-width: 320px;
+}
+
+.container {
+  width: min(100%, 1366px);
+  margin: 0 auto;
+}
+
+.card-wrapper {
+}
+
+.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.article-text {
+}
+
+.article-title {
+}
