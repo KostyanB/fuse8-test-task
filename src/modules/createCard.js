@@ -19,30 +19,29 @@ const createCard = ({ address, id, price, title, type }) => {
   const labelClass = blueType ? 'blue' : 'orange';
   const labelText = blueType ? createLabel(type) : `Restaurant & ${createLabel(type)}`;
 
-  const card = document.createElement('div');
+  const card = document.createElement('a');
   card.className = 'card';
+  card.setAttribute('href', `details/${id}`);
   card.innerHTML = `
-    <a href="/details/${id}" class="card__link">
       <div class="card__picture">
-        <img src="${createSrc(price)}" alt="image: ${title}" class="card__image">
+        <img src="${createSrc(price)}" alt="image: ${title}" class="card__image" loading="lazy">
         <div class="card__label card__label-${labelClass}">${labelText}</div>
       </div>
       <article class="card__content">
         <h1 class="card__title">
           ${title}
         </h1>
-        <p class="card__description">
+        <p class="card__address">
           ${address}
         </p>
-        <p class="_card__description">
+        <p class="card__price">
           New Properties for Sale from
-          <span class="card__price"> ${currency}${price}</span>
+          <span> ${currency}${price}</span>
         </p>
         <p class="card__comment">
           Shared Ownership Available
         </p>
       </article>
-    </a>
 	`;
   return card;
 };

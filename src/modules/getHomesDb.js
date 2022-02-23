@@ -1,6 +1,7 @@
 import env from '../../env.json';
 
-const dbUrl = env.backend.dbUrl;
+// const dbUrl = env.backend.dbUrl;
+const dbUrl = '../db/homes.json';
 
 const getDb = () => {
   const data = [];
