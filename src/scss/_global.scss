@@ -33,15 +33,6 @@ button {
   display: flex;
   align-items: center;
   height: 50px;
-  // gap: 5px;
   border: $border;
   border-radius: 25px;
-  // padding: 12px 33px;
-
-  // @extend %button-text;
-
-  // & > svg {
-  //   width: 7px;
-  //   height: 17px;
-  // }
 }

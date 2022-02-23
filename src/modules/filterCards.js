@@ -3,7 +3,7 @@ import renderCards from './renderCards';
 
 const filterCards = ({ field, value }) => {
   getHomesDb()
-    .then((data) => data.filter((home) => home[field] === value))
+    .then((data) => data.filter((home) => home[field].toLowerCase().includes(value.toLowerCase())))
     .then(renderCards);
 };
 export default filterCards;
