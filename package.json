@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KostyanB/"
+    "url": "git+https://github.com/KostyanB/fuse8-test-task/"
   },
   "keywords": [],
   "author": "Konstantin Berezko",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/KostyanB/"
   },
-  "homepage": "https://github.com/KostyanB/",
+  "homepage": "https://github.com/KostyanB/fuse8-test-task/",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "D": "^1.0.0",
