@@ -22,8 +22,14 @@
       <label for="card-filter" class="filter__label">Filter</label>
       <input type="text" name="card-filter" class="button filter__input" />
     </div>
-    <main class="cards container">
-      <!-- create cards in renderCards.js->createCard.js -->
+    <main class="main container">
+      <div class="main__wrapper">
+        <div class="main__content">
+          <!-- create cards in renderCards.js->createCard.js -->
+        </div>
+        <div class="hidden main__loader">...Loading</div>
+        <div class="hidden main__error"></div>
+      </div>
     </main>
     <div class="container seemore">
       <button class="button seemore__button">

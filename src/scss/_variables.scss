@@ -3,6 +3,7 @@ $body-text-color: #363636;
 $main-title: #45852d;
 $scroll-color: #006f79;
 $hover-color: #006f79;
+$error-color: #ff004c;
 
 $card-fill: #f8f8f8;
 $card-title: #363636;
@@ -17,4 +18,14 @@ $border: 1px solid #d8d8d8;
   font-weight: bold;
   line-height: 24px;
   letter-spacing: -0.3px;
+}
+
+%load-style {
+  grid-area: 1/-1;
+  margin: 0 auto;
+  // display: flex;
+  // justify-content: center;
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 24px;
 }

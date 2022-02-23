@@ -1,7 +1,7 @@
 import createCard from './createCard';
 import handleCardLinks from './handleCardLinks';
 
-const cardsList = document.querySelector('.cards');
+const cardsList = document.querySelector('.main__content');
 
 const renderCards = (data) => {
   cardsList.textContent = '';

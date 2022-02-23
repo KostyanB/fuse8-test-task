@@ -1,5 +1,5 @@
 .card {
-  width: 379px;
+  width: min(100%, 379px);
   min-height: 381px;
   background-color: $card-fill;
   border: $border;
@@ -13,8 +13,8 @@
 
   &__image {
     grid-area: 1/-1;
-    width: 377px;
-    height: 227px;
+    width: min(100%, 377px);
+    height: auto;
   }
 
   &__label {

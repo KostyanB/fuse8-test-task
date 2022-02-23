@@ -1,4 +1,5 @@
 import env from '../../env.json';
+import { setLoading, setSuccess, setError } from './handleLoading';
 
 const dbUrl = env.backend.dbUrl;
 
@@ -6,13 +7,18 @@ const getDb = () => {
   const data = [];
   return async () => {
     if (data.length) return data;
+    setLoading();
+    try {
+      const result = await fetch(dbUrl);
 
-    const result = await fetch(dbUrl);
+      if (!result.ok) throw `Server error ${result.status}`;
 
-    if (!result.ok) throw `Ошибка БД ${result.status}`;
-
-    data.push(...(await result.json()));
-    return data;
+      data.push(...(await result.json()));
+      setSuccess();
+      return data;
+    } catch (error) {
+      setError(error.message);
+    }
   };
 };
 

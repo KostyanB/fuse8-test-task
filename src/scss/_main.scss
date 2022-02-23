@@ -1,0 +1,31 @@
+.main {
+  &__wrapper {
+    display: grid;
+    width: 100%;
+  }
+
+  &__content {
+    grid-area: 1/-1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 38px;
+    width: 100%;
+    padding-top: 45px;
+  }
+
+  &__loader {
+    @extend %load-style;
+    color: $hover-color;
+  }
+
+  &__error {
+    @extend %load-style;
+    color: $error-color;
+  }
+
+  & > div {
+    transition: opacity 0.3s;
+  }
+}
