@@ -4,12 +4,8 @@
   background-color: $card-fill;
   border: $border;
   cursor: pointer;
-
-  // &__link {
   display: flex;
   flex-direction: column;
-  // height: 100%;
-  // }
 
   &__picture {
     display: grid;

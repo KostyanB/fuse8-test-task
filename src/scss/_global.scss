@@ -20,7 +20,27 @@ body {
   }
 }
 
+button {
+  transition: color 0.3s, border-color 0.3s;
+}
+
 .container {
   width: min(98%, 1200px);
   margin: 0 auto;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  // gap: 5px;
+  border: $border;
+  border-radius: 25px;
+  padding: 12px 33px;
+
+  // @extend %button-text;
+
+  // & > svg {
+  //   width: 7px;
+  //   height: 17px;
+  // }
 }

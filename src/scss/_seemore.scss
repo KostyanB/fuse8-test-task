@@ -1,0 +1,25 @@
+.seemore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 77px;
+
+  &__button {
+    justify-content: center;
+    gap: 5px;
+
+    @extend %label-text;
+
+    & > svg {
+      width: 7px;
+      height: 17px;
+    }
+
+    &:hover,
+    &:active {
+      color: $hover-color;
+      border-color: $hover-color;
+    }
+  }
+}

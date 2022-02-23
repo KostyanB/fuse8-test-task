@@ -1,7 +1,8 @@
 $body-fill: #ffffff;
 $body-text-color: #363636;
 $main-title: #45852d;
-$scroll-color: #45852d;
+$scroll-color: #006f79;
+$hover-color: #006f79;
 
 $card-fill: #f8f8f8;
 $card-title: #363636;
@@ -11,3 +12,9 @@ $label-fill-orange: #ec6608;
 $label-text: #ffffff;
 
 $border: 1px solid #d8d8d8;
+
+%label-text {
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+}

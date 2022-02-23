@@ -23,25 +23,25 @@ const createCard = ({ address, id, price, title, type }) => {
   card.className = 'card';
   card.setAttribute('href', `details/${id}`);
   card.innerHTML = `
-      <div class="card__picture">
-        <img src="${createSrc(price)}" alt="image: ${title}" class="card__image" loading="lazy">
-        <div class="card__label card__label-${labelClass}">${labelText}</div>
-      </div>
-      <article class="card__content">
-        <h1 class="card__title">
-          ${title}
-        </h1>
-        <p class="card__address">
-          ${address}
-        </p>
-        <p class="card__price">
-          New Properties for Sale from
-          <span> ${currency}${price}</span>
-        </p>
-        <p class="card__comment">
-          Shared Ownership Available
-        </p>
-      </article>
+    <div class="card__picture">
+      <img src="${createSrc(price)}" alt="image: ${title}" class="card__image" loading="lazy">
+      <div class="card__label card__label-${labelClass}">${labelText}</div>
+    </div>
+    <article class="card__content">
+      <h1 class="card__title">
+        ${title}
+      </h1>
+      <p class="card__address">
+        ${address}
+      </p>
+      <p class="card__price">
+        New Properties for Sale from
+        <span> ${currency}${price}</span>
+      </p>
+      <p class="card__comment">
+        Shared Ownership Available
+      </p>
+    </article>
 	`;
   return card;
 };
