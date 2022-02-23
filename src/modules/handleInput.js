@@ -5,6 +5,16 @@ import renderCards from './renderCards';
 const handleInput = () => {
   const filterInput = document.querySelector('.filter__input');
 
+  const debounce = (fn, msec) => {
+    let timeout;
+
+    return function () {
+      const callback = () => fn.apply(this, arguments);
+      clearTimeout(timeout);
+      timeout = setTimeout(callback, msec);
+    };
+  };
+
   const renderFiltered = () => {
     const value = filterInput.value;
 
@@ -16,6 +26,8 @@ const handleInput = () => {
       : getHomesDb().then(renderCards);
   };
 
-  filterInput.addEventListener('input', renderFiltered);
+  const renderFilteredDebounce = debounce(renderFiltered, 300);
+
+  filterInput.addEventListener('input', renderFilteredDebounce);
 };
 export default handleInput;
