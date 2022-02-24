@@ -14,10 +14,11 @@ export const formatLabel = (str) => {
 };
 
 export const formatPrice = (dig) => {
-  const formatter = new Intl.NumberFormat('ru', {
+  const formatter = new Intl.NumberFormat('en', {
+    style: 'currency',
+    currency: env.currency,
     minimumFractionDigits: 3,
   });
 
-  const price = formatter.format((dig - 1) / 1000);
-  return `${env.currency}${price}`;
+  return formatter.format((dig - 1) / 1000).replace('.', ',');
 };
