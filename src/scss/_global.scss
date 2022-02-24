@@ -40,3 +40,13 @@ button {
 .hidden {
   opacity: 0;
 }
+
+.loading {
+  color: $hover-color;
+  opacity: 1;
+}
+
+.error {
+  color: $error-color;
+  opacity: 1;
+}

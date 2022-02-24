@@ -1,5 +1,5 @@
 import env from '../../env.json';
-import { setLoading, setSuccess, setError } from './handleLoading';
+import { showResultMessage, hideMessage } from './handleResultMessage';
 
 const dbUrl = env.backend.dbUrl;
 
@@ -7,17 +7,23 @@ const getDb = () => {
   const data = [];
   return async () => {
     if (data.length) return data;
-    setLoading();
+
+    showResultMessage({ text: '...Loading', status: 'loading' });
+
     try {
       const result = await fetch(dbUrl);
 
       if (!result.ok) throw `Server error ${result.status}`;
 
       data.push(...(await result.json()));
-      setSuccess();
+      hideMessage();
       return data;
     } catch (error) {
-      setError(error.message);
+      console.warn(error.message);
+      showResultMessage({
+        text: `Error: ${error.message}. We will fix it soon...`,
+        status: 'error',
+      });
     }
   };
 };

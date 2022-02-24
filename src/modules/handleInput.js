@@ -1,33 +1,36 @@
 import filterCards from './filterCards';
 import getHomesDb from './getHomesDb';
 import renderCards from './renderCards';
+import { hideMessage } from './handleResultMessage';
+import debounce from './debounce';
 
 const handleInput = () => {
   const filterInput = document.querySelector('.filter__input');
+  let prev = 0,
+    next = 0,
+    isRendered = false;
 
-  const debounce = (fn, msec) => {
-    let timeout;
+  const handleInputValue = () => {
+    next = filterInput.value.length;
 
-    return function () {
-      const callback = () => fn.apply(this, arguments);
-      clearTimeout(timeout);
-      timeout = setTimeout(callback, msec);
-    };
+    if (next >= 3) {
+      filterCards({
+        field: 'title',
+        value: filterInput.value,
+      });
+      isRendered = false;
+    } else {
+      if (next < prev) {
+        hideMessage();
+        !isRendered && getHomesDb().then(renderCards);
+        isRendered = true;
+      }
+    }
+    prev = next;
   };
 
-  const renderFiltered = () => {
-    const value = filterInput.value;
+  const handleInputValueDebounce = debounce(handleInputValue, 300);
 
-    value.length >= 3
-      ? filterCards({
-          field: 'title',
-          value,
-        })
-      : getHomesDb().then(renderCards);
-  };
-
-  const renderFilteredDebounce = debounce(renderFiltered, 300);
-
-  filterInput.addEventListener('input', renderFilteredDebounce);
+  filterInput.addEventListener('input', handleInputValueDebounce);
 };
 export default handleInput;
